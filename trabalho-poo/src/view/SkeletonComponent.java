@@ -13,6 +13,7 @@ public abstract class SkeletonComponent extends JPanel {
     protected JTextField input2;
     protected JButton calculateButton;
     protected JLabel result;
+    protected JLabel formula;
     
     // Serve para passar minha função estática para o construtor
     @FunctionalInterface
@@ -20,7 +21,7 @@ public abstract class SkeletonComponent extends JPanel {
         String apply(double a, double b);
     }
     
-    public SkeletonComponent(String label1, String label2, String resultLabel, Calculation calculation) {
+    public SkeletonComponent(String label1, String label2, String resultLabel, String formula, Calculation calculation) {
         setBorder(BorderFactory.createTitledBorder(
             BorderFactory.createLineBorder(Color.GRAY),
             getCardTitle(), 
@@ -43,6 +44,10 @@ public abstract class SkeletonComponent extends JPanel {
         add(new JLabel(resultLabel));
         result = new JLabel();
         add(result);
+        
+        this.formula = new JLabel(formula);
+        add(this.formula);
+
 
         calculateButton = new JButton("Calcular");
         add(calculateButton);

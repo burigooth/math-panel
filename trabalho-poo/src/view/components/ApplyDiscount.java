@@ -9,13 +9,14 @@ public class ApplyDiscount extends SkeletonComponent {
         super(
             "Valor inicial R$ (a)", 
             "% desconto (b)", 
-            "Preço com desconto", 
+            "Preço com desconto",
+            "v = a - (a * (b /100))",
         	CalculateAction::calculateDiscount
         );
     }
 
     @Override
     protected String getCardTitle() {
-        return "Desconto";
+        return "Aplicar desconto % num valor";
     }
 }

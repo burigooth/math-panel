@@ -11,6 +11,12 @@ import javax.swing.SwingUtilities;
 import javax.swing.border.TitledBorder;
 
 import view.components.ApplyDiscount;
+import view.components.CalculateDiscountWithValues;
+import view.components.CalculateInicialValueWithoutDiscount;
+import view.components.DeltaVariation;
+import view.components.IncrementValue;
+import view.components.XInYPercentage;
+import view.components.XInYValue;
 
 public class PrincipalFrame {
 	public static void main(String[] args) {
@@ -19,10 +25,14 @@ public class PrincipalFrame {
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             frame.setLayout(new GridLayout(2, 4, 10, 10));
 
-            for (int i = 0; i < 8; i++) {
-                frame.add(new ApplyDiscount());
-            }
-
+            frame.add(new ApplyDiscount());
+            frame.add(new IncrementValue());
+            frame.add(new XInYPercentage());
+            frame.add(new XInYValue());
+            frame.add(new CalculateDiscountWithValues());
+            frame.add(new DeltaVariation());
+            frame.add(new CalculateInicialValueWithoutDiscount());
+       
             frame.pack();
             frame.setLocationRelativeTo(null);
             frame.setVisible(true);
