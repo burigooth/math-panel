@@ -32,17 +32,23 @@ public abstract class RuleOfThreeComponent extends JPanel {
 
         setLayout(new GridLayout(3, 2, 5, 5)); 
 
-        add(new JLabel(label1));
+        JLabel label1Component = new JLabel(label1);
+        label1Component.setForeground(Color.BLUE); 
+        add(label1Component);
         input1 = new JTextField();
         InputValidator.validate(input1);
         add(input1);
 
-        add(new JLabel(label2));
+        JLabel label2Component = new JLabel(label2);
+        label2Component.setForeground(Color.RED); 
+        add(label2Component);
         input2 = new JTextField();
         InputValidator.validate(input2);
         add(input2);
         
-        add(new JLabel(label3));
+        JLabel label3Component = new JLabel(label3);
+        label3Component.setForeground(Color.GREEN); 
+        add(label3Component);
         input3 = new JTextField();
         InputValidator.validate(input3);
         add(input3);

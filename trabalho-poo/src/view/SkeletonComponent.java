@@ -4,7 +4,6 @@ import java.awt.Color;
 import java.awt.GridLayout;
 import javax.swing.*;
 import javax.swing.border.*;
-
 import validator.InputValidator;
 
 public abstract class SkeletonComponent extends JPanel {
@@ -31,12 +30,18 @@ public abstract class SkeletonComponent extends JPanel {
 
         setLayout(new GridLayout(4, 2, 5, 5)); 
 
-        add(new JLabel(label1));
+        JLabel label1Component = new JLabel(label1);
+        label1Component.setForeground(Color.BLUE); 
+        add(label1Component);
+        
         input1 = new JTextField();
         InputValidator.validate(input1);
         add(input1);
 
-        add(new JLabel(label2));
+        JLabel label2Component = new JLabel(label2);
+        label2Component.setForeground(Color.RED);
+        add(label2Component);
+        
         input2 = new JTextField();
         InputValidator.validate(input2);
         add(input2);
@@ -44,10 +49,9 @@ public abstract class SkeletonComponent extends JPanel {
         add(new JLabel(resultLabel));
         result = new JLabel();
         add(result);
-        
+
         this.formula = new JLabel(formula);
         add(this.formula);
-
 
         calculateButton = new JButton("Calcular");
         add(calculateButton);

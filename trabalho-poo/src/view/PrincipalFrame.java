@@ -25,7 +25,7 @@ public class PrincipalFrame {
 		SwingUtilities.invokeLater(() -> {
             JFrame frame = new JFrame("Teste de Componentes");
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            frame.setLayout(new GridLayout(2, 4, 10, 10));
+            frame.setLayout(new GridLayout(0, 3, 10, 10));
 
             frame.add(new ApplyDiscount());
             frame.add(new IncrementValue());
@@ -36,6 +36,8 @@ public class PrincipalFrame {
             frame.add(new CalculateInicialValueWithoutDiscount());
             frame.add(new CalculateRuleOfThree());
             frame.add(new GeneratePasswordPanel());
+            
+            frame.setSize(800, 600);
        
             frame.pack();
             frame.setLocationRelativeTo(null);
