@@ -14,9 +14,11 @@ import view.components.ApplyDiscount;
 import view.components.CalculateDiscountWithValues;
 import view.components.CalculateInicialValueWithoutDiscount;
 import view.components.DeltaVariation;
+import view.components.GeneratePasswordPanel;
 import view.components.IncrementValue;
 import view.components.XInYPercentage;
 import view.components.XInYValue;
+import view.components.CalculateRuleOfThree;
 
 public class PrincipalFrame {
 	public static void main(String[] args) {
@@ -32,6 +34,8 @@ public class PrincipalFrame {
             frame.add(new CalculateDiscountWithValues());
             frame.add(new DeltaVariation());
             frame.add(new CalculateInicialValueWithoutDiscount());
+            frame.add(new CalculateRuleOfThree());
+            frame.add(new GeneratePasswordPanel());
        
             frame.pack();
             frame.setLocationRelativeTo(null);

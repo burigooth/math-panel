@@ -35,5 +35,10 @@ public class CalculateAction {
 		double result = (a*100 / (100 - b));
 		return String.format("%.2f", result);
 	}
+	
+	public static String calculateRuleOfThree(double a, double b, double r1) {
+		double result = (r1 * b) / a;
+		return String.format("%.2f", result);
+	}
 
 }
